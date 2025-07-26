@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LexLoop</title>
+  <title>Vocab for Stage 1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
   <style>
@@ -184,7 +184,7 @@
 <body>
 
   <div id="selectorScreen">
-    <h1 id="reviewTitle">⚡ LexLoop</h1>
+    <h1 id="reviewTitle">⚡ Vocab for Stage 1</h1>
     <div class="startLine">
       <button id="startBtn" onclick="startReview()">Start</button>
     </div>
@@ -192,7 +192,7 @@
   </div>
 
   <div id="reviewScreen">
-    <h1>⚡ LexLoop</h1>
+    <h1>⚡ Vocab for Stage 1</h1>
     <div id="wordDisplay">...</div>
     <div id="hintDisplay"></div>
     <div class="buttonRow">
@@ -203,7 +203,7 @@
   </div>
 
   <script>
-    const sheetId = '1PGKAbRIC0fP7IFK1UWAmqgcGI6xFZ114OBJ2CSIiMHk';
+    const sheetId = '1Ig6eqM7lRS9t81G9pVHGjNCoCXtvrDUCzeCVrEaj_pw';
     const apiKey = 'AIzaSyDTI3yXucHM8LHQeSXJYYJJYVzufW0R6ik';
 
     let selectedSheets = [], allWords = [], currentIndex = 0, hintedWords = [], hintShown = false;
@@ -230,13 +230,13 @@ data.sheets.forEach((sheet, index) => {
   const label = document.createElement('label');
   label.innerHTML = `<input type="checkbox" value="${name}"/> ${name}`;
 
-  if (index < 8) {
+  if (index % 2 === 0) {
     leftColumn.appendChild(label);
   } else {
     rightColumn.appendChild(label);
   }
 });
-
+      
 dateContainer.appendChild(leftColumn);
 dateContainer.appendChild(rightColumn);
 sheetList.appendChild(dateContainer);
